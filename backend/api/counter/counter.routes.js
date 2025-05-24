@@ -3,11 +3,10 @@ import { incrementCounter, setOnceCounter, getCounter, getMetrics } from './coun
 
 const router = Router()
 
-router.post('/increment', incrementCounter)
-
-router.post('/set-once', setOnceCounter)
-
 router.get('/', getCounter)
 router.get('/dashboard', getMetrics)
+
+router.post('/increment', incrementCounter)
+router.post('/set-once', setOnceCounter)
 
 export const counterRouter = router

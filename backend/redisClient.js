@@ -6,10 +6,10 @@ const REDIS_PORT = process.env.REDIS_PORT
 const REDIS_PASSWORD = process.env.REDIS_PASSWORD
 
 const redis = createClient({
-	username: 'alonWohl',
-	password: '9c8gRTLNpC7Zq!G',
+	username: REDIS_USERNAME,
+	password: REDIS_PASSWORD,
 	socket: {
-		host: 'redis-11725.crce177.me-south-1-1.ec2.redns.redis-cloud.com',
+		host: REDIS_HOST,
 		port: 11725
 	}
 })

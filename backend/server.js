@@ -9,7 +9,6 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 3030
 
-// CORS configuration
 if (process.env.NODE_ENV === 'production') {
 	app.use(cors({ credentials: true }))
 } else {
@@ -23,7 +22,6 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(express.json())
 
-// API routes
 app.use('/api/counter', counterRouter)
 
 if (process.env.NODE_ENV === 'production') {

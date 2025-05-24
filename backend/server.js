@@ -20,8 +20,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(express.json())
-
 app.use('/api/counter', counterRouter)
+
+app.get('*', (req, res) => {
+	res.sendFile(path.resolve('public/index.html'))
+})
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port http://localhost:${PORT}`)
